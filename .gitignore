@@ -4,6 +4,7 @@
 node_modules/
 vendor/
 *.log
-apache-theme/assets
+apache-theme/assets/**
+!apache-theme/assets/
 apache-theme/docs
 apache-theme/scripts
