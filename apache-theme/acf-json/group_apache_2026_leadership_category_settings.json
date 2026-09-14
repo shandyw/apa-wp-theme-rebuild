@@ -1,0 +1,62 @@
+{
+    "key": "group_apache_2026_leadership_category_settings",
+    "title": "Leadership Category Settings",
+    "fields": [
+        {
+            "key": "field_apache_2026_leadership_category_ordered_members",
+            "label": "Ordered Members",
+            "name": "ordered_members",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "Drag selected leadership posts into the order this category should display. Members in this category that are not selected here will appear afterward.",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "leaderships"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
+            ],
+            "elements": [],
+            "min": 0,
+            "max": 0,
+            "return_format": "id",
+            "bidirectional": 0,
+            "allow_in_bindings": 0,
+            "bidirectional_target": []
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "leadership_category"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1783963269
+}

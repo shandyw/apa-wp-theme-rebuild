@@ -1,0 +1,324 @@
+{
+    "key": "group_apache_2026_video_cpt",
+    "title": "Video Details",
+    "fields": [
+        {
+            "key": "field_apache_2026_video_source_type",
+            "label": "Video Source Type",
+            "name": "video_source_type",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "vimeo": "Vimeo",
+                "youtube": "YouTube",
+                "self_hosted": "Self-hosted Video",
+                "embed": "Custom Embed"
+            },
+            "default_value": "vimeo",
+            "ui": 1,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0,
+            "allow_custom": 0,
+            "search_placeholder": ""
+        },
+        {
+            "key": "field_apache_2026_vimeo_video_id",
+            "label": "Vimeo Video ID",
+            "name": "vimeo_video_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Format must be like: https:\/\/player.vimeo.com\/video\/...",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_apache_2026_video_source_type",
+                        "operator": "==",
+                        "value": "vimeo"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_apache_2026_youtube_video_id",
+            "label": "YouTube Video ID",
+            "name": "youtube_video_id",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Enter only the YouTube video ID, not the full URL.",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_apache_2026_video_source_type",
+                        "operator": "==",
+                        "value": "youtube"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_apache_2026_self_hosted_video_file",
+            "label": "Self-hosted Video File",
+            "name": "self_hosted_video_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_apache_2026_video_source_type",
+                        "operator": "==",
+                        "value": "self_hosted"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "mime_types": "mp4,webm",
+            "library": "all",
+            "min_size": 0,
+            "max_size": 0,
+            "uploader": ""
+        },
+        {
+            "key": "field_apache_2026_custom_embed_code",
+            "label": "Custom Embed Code",
+            "name": "custom_embed_code",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Use only trusted embed code. Output is sanitized before rendering.",
+            "required": false,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_apache_2026_video_source_type",
+                        "operator": "==",
+                        "value": "embed"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 4,
+            "new_lines": "br",
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "acfe_textarea_code": 0
+        },
+        {
+            "key": "field_apache_2026_video_poster_image",
+            "label": "Poster",
+            "name": "video_poster_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Optional poster image shown for the video when available.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": "",
+            "uploader": "",
+            "acfe_thumbnail": 0
+        },
+        {
+            "key": "field_apache_2026_video_caption",
+            "label": "Caption \/ Transcript",
+            "name": "video_caption",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "default_value": ""
+        },
+        {
+            "key": "field_apache_2026_video_settings_tab",
+            "label": "Video Settings",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_apache_2026_video_autoplay",
+            "label": "Autoplay",
+            "name": "video_autoplay",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_apache_2026_video_muted",
+            "label": "Muted",
+            "name": "video_muted",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_apache_2026_video_loop",
+            "label": "Loop",
+            "name": "video_loop",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 0,
+            "ui": 1,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_apache_2026_video_controls",
+            "label": "Controls",
+            "name": "video_controls",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "apache_video"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe": {
+        "autosync": [
+            "json"
+        ]
+    },
+    "modified": 1780587023
+}

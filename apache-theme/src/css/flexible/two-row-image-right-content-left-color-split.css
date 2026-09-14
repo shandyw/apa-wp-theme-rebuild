@@ -1,0 +1,148 @@
+.apache-flex--two-row-image-right-content-left-color-split {
+  --apache-split-bg: var(--wp--preset--color--accent);
+  --apache-arrow-color: color-mix(in srgb, var(--wp--preset--color--contrast) 75%, transparent);
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--wp--preset--spacing--60);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split.apache-flex--color-gold {
+  --apache-split-bg: var(--wp--preset--color--accent);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split.apache-flex--color-green {
+  --apache-split-bg: var(--wp--preset--color--green);
+  --apache-arrow-color: #4d9248;
+}
+
+.apache-flex--two-row-image-right-content-left-color-split.apache-flex--color-yellow {
+  --apache-split-bg: var(--wp--preset--color--yellow);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+  gap: var(--wp--preset--spacing--50);
+  align-items: stretch;
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--apache-split-bg);
+  padding: var(--wp--preset--spacing--40);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__section-name {
+  margin-bottom: var(--wp--preset--spacing--20);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__headline {
+  margin-block: 0 var(--wp--preset--spacing--30);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__content > :last-child {
+  margin-bottom: 0;
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--wp--preset--spacing--20);
+  margin-top: var(--wp--preset--spacing--30);
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__media {
+  margin: 0;
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__image {
+  width: 100%;
+  height: auto;
+}
+
+.apache-flex--two-row-image-right-content-left-color-split__decor {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .apache-flex--two-row-image-right-content-left-color-split {
+    background:
+      linear-gradient(
+        to right,
+        var(--apache-split-bg) 0 50%,
+        transparent 50% 100%
+      );
+    padding-block: var(--wp--preset--spacing--70);
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--wp--preset--spacing--60);
+    align-items: center;
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__body {
+    min-height: 100%;
+    padding: var(--wp--preset--spacing--50);
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split.apache-flex--text-top .apache-flex--two-row-image-right-content-left-color-split__body {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 992px) {
+  .apache-flex--two-row-image-right-content-left-color-split__decor {
+    position: absolute;
+    inset: 0;
+    display: block;
+    pointer-events: none;
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__arrows {
+    position: absolute;
+    width: 204px;
+    height: 360px;
+    opacity: 0.14;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0 42px,
+        var(--apache-arrow-color) 42px 48px,
+        transparent 48px 70px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        transparent 0 42px,
+        var(--apache-arrow-color) 42px 48px,
+        transparent 48px 70px
+      );
+    background-size: 204px 70px;
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__arrows--top {
+    top: var(--wp--preset--spacing--30);
+    left: max(var(--apa-container-gutter), calc((100vw - var(--apa-content-width)) / 2));
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__arrows--bottom {
+    right: max(var(--apa-container-gutter), calc((100vw - var(--apa-content-width)) / 2));
+    bottom: var(--wp--preset--spacing--30);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .apache-flex--two-row-image-right-content-left-color-split {
+    background: var(--apache-split-bg);
+    padding-block: var(--wp--preset--spacing--40);
+  }
+
+  .apache-flex--two-row-image-right-content-left-color-split__body {
+    padding: 0;
+  }
+}

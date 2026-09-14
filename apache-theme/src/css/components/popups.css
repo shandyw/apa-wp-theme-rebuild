@@ -1,0 +1,130 @@
+.site-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 3vw, 32px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 350ms ease, visibility 350ms ease;
+}
+
+.site-popup.is-rendered {
+  visibility: visible;
+}
+
+.site-popup.is-open {
+  opacity: 1;
+}
+
+.site-popup__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgb(8 15 26 / 0.74);
+}
+
+.site-popup__dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, 1100px);
+  max-height: min(90vh, 920px);
+  overflow: hidden;
+  background: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
+  box-shadow: 0 1.25rem 3rem rgb(0 0 0 / 0.22);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 350ms ease, opacity 350ms ease;
+}
+
+.site-popup.is-open .site-popup__dialog {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.site-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--base);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.site-popup__content {
+  overflow: auto;
+  padding: 20px;
+}
+.site-popup__body .video-module{
+  padding-block: 0;
+}
+.site-popup__body .video-module__inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+.site-popup__body .apache-video__surface {
+  z-index: 0;
+}
+
+.site-popup__title {
+  margin: 0 0 clamp(20px, 2.5vw, 28px);
+  padding-right: 56px;
+}
+
+.site-popup__body > :first-child {
+  margin-top: 0;
+}
+
+.site-popup__body > :last-child {
+  margin-bottom: 0;
+}
+
+.site-popup__notice {
+  margin: 0;
+}
+
+html.has-popup-open,
+body.has-popup-open {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .site-popup {
+    padding: 12px;
+  }
+
+  .site-popup__dialog {
+    width: 100%;
+    max-height: calc(100vh - 24px);
+  }
+
+  .site-popup__content {
+    padding: 20px;
+  }
+
+  .site-popup__title {
+    padding-right: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-popup,
+  .site-popup__dialog {
+    transition: none;
+  }
+}

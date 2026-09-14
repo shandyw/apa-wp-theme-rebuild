@@ -1,0 +1,50 @@
+.card-repeater {
+  background: var(--wp--preset--color--base);
+  padding-block: var(--wp--preset--spacing--50);
+}
+
+header + .card-repeater {
+  padding-block-start: 0;
+}
+
+.card-repeater__inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.card-repeater__grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card-repeater--cols-2 .card-repeater__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card-repeater--cols-3 .card-repeater__grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-repeater--cols-4 .card-repeater__grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-repeater__item {
+  min-width: 0;
+}
+
+@media (max-width: 1023px) {
+  .card-repeater--cols-3 .card-repeater__grid,
+  .card-repeater--cols-4 .card-repeater__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .card-repeater--cols-2 .card-repeater__grid,
+  .card-repeater--cols-3 .card-repeater__grid,
+  .card-repeater--cols-4 .card-repeater__grid,
+  .card-repeater__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

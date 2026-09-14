@@ -1,0 +1,9 @@
+.DS_Store
+.env
+.env.*
+node_modules/
+vendor/
+*.log
+apache-theme/assets
+apache-theme/docs
+apache-theme/scripts

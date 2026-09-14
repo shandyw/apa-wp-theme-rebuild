@@ -1,0 +1,88 @@
+.apache-flex--full-width-biography {
+  padding-block: 0 var(--wp--preset--spacing--60);
+}
+
+.apache-flex--full-width-biography__inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.apache-flex--full-width-biography__grid {
+  display: grid;
+  gap: var(--wp--preset--spacing--50) var(--wp--preset--spacing--30);
+}
+
+.apache-flex--full-width-biography__card {
+  min-width: 0;
+}
+
+.apache-flex--full-width-biography__image-link {
+  display: block;
+  background: var(--wp--preset--color--muted);
+  text-decoration: none;
+}
+
+.apache-flex--full-width-biography__image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.apache-flex--full-width-biography__info {
+  width: 90%;
+  margin-top: var(--wp--preset--spacing--20);
+}
+
+.apache-flex--full-width-biography__name-block {
+  margin-bottom: 0;
+}
+
+h2.apache-flex--full-width-biography__name{
+  margin-block: 0 var(--wp--preset--spacing--10);
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h2.apache-flex--full-width-biography__name a {
+  color: var(--wp--preset--color--link);
+  text-decoration: none;
+}
+
+.apache-flex--full-width-biography__name a {
+  color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+}
+
+.apache-flex--full-width-biography__name a:hover,
+.apache-flex--full-width-biography__name a:focus {
+  color: var(--wp--preset--color--link);
+  text-decoration: underline;
+}
+
+.apache-flex--full-width-biography__position,
+.apache-flex--full-width-biography__division {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+@media (min-width: 600px) {
+  .apache-flex--full-width-biography__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .apache-flex--full-width-biography__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .apache-flex--full-width-biography__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

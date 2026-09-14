@@ -1,0 +1,74 @@
+{
+    "key": "group_apache_2026_gallery_attachment_downloads",
+    "title": "Gallery Downloads",
+    "fields": [
+        {
+            "key": "field_apache_2026_low_res_download",
+            "label": "Low-Res Download",
+            "name": "low_res_download",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload or select the smaller image file users can download.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_apache_2026_high_res_download",
+            "label": "High-Res Download",
+            "name": "high_res_download",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Upload or select the full-size or highest-quality image file users can download.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "attachment",
+                "operator": "==",
+                "value": "image"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1779296401
+}

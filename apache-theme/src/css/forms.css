@@ -1,0 +1,385 @@
+label {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--wp--preset--color--contrast);
+  font-size: var(--wp--preset--font-size--label);
+  line-height: 1.11;
+  /* text-transform: uppercase; */
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  color: var(--wp--preset--color--contrast);
+  font-family: var(--wp--preset--font-family--post-grotesk-book);
+  font-size: var(--wp--preset--font-size--medium);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid var(--wp--preset--color--accent);
+  border-radius: 0;
+  background: transparent;
+  line-height: 1.4;
+  padding: 10px 34px 12px 0;
+}
+
+textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+
+input, button, select, optgroup, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+textarea.custom,
+.gfield textarea {
+  min-height:150px;
+  height: 150px;
+  border: 34px solid transparent;
+  border-image: url("data:image/svg+xml;charset=utf-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3e%3cpath fill='none' stroke='%23ce9e34' stroke-width='2' d='M 32 1 H 99 V 68 L 68 99 H 1 V 32 Z'/%3e%3c/svg%3e") 34 fill / 34px;
+  background: transparent;
+}
+
+select {
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  appearance: none;
+  background-color: var(--wp--preset--color--dark);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='22' viewBox='0 0 30 22'%3e%3cpath fill='%23ffffff' stroke-width='0' d='M0 3 H30 L15 22 Z'/%3e%3c/svg%3e");
+  background-position: calc(100% - 16px) 50%;
+  background-repeat: no-repeat;
+  background-size: 15px auto;
+  color: var(--wp--preset--color--base);
+  font-size: var(--wp--preset--font-size--label);
+  line-height: 1.1;
+  padding: 12px 46px 12px 16px;
+  text-transform: uppercase;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+::placeholder {
+  color: #6f6760;
+  opacity: 1;
+}
+
+.has-error,
+.gfield_error,
+.validation_message {
+  color: var(--wp--preset--color--error);
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--wp--preset--spacing--20);
+}
+
+.search-form label {
+  flex: 1 1 16rem;
+  margin-bottom: 0;
+}
+
+.search-field {
+  min-height: 44px;
+}
+
+.search-submit {
+  flex: 0 0 auto;
+}
+
+.form-module {
+  background: var(--wp--preset--color--neutral);
+  padding-block: var(--wp--preset--spacing--70);
+}
+
+.form-module .entry-content,
+.form-module .gform_wrapper {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.gform_wrapper {
+  max-width: 100%;
+}
+
+.gform_fields {
+  display: grid;
+  gap: var(--wp--preset--spacing--40);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.gfield {
+  margin: 0;
+}
+
+.gfield_label {
+  display: inline-block;
+}
+
+.gfield_required {
+  color: var(--wp--preset--color--error);
+}
+
+.ginput_complex {
+  display: grid;
+  gap: var(--wp--preset--spacing--30);
+}
+
+/* .ginput_container_fileupload,
+.gform_drop_area {
+  border: 2px solid var(--wp--preset--color--muted);
+  background: color-mix(in srgb, var(--wp--preset--color--neutral) 72%, var(--wp--preset--color--base));
+  padding: var(--wp--preset--spacing--40);
+} */
+
+.gform_fileupload_multifile {
+  border: 2px solid var(--wp--preset--color--muted);
+  background: color-mix(in srgb, var(--wp--preset--color--neutral) 72%, var(--wp--preset--color--base));
+  padding: var(--wp--preset--spacing--40);
+}
+
+
+
+.gform_drop_instructions {
+  margin-bottom: var(--wp--preset--spacing--20);
+}
+
+.gform_footer {
+  margin-top: var(--wp--preset--spacing--50);
+}
+
+
+.gfield_description,
+.validation_message,
+.gform_validation_errors {
+  font-size: var(--wp--preset--font-size--small);
+  line-height: 1.4;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.gform_validation_errors {
+  margin-bottom: var(--wp--preset--spacing--40);
+  border-left: none;
+  background: color-mix(in srgb, var(--wp--preset--color--error) 8%, var(--wp--preset--color--base));
+  padding: var(--wp--preset--spacing--30);
+  box-shadow: none;
+}
+
+
+.gform_validation_errors h2 {
+  margin: 0;
+  text-transform: none;
+  font-size: var(--wp--preset--font-size--heading-3);
+}
+
+
+.gfield_error input,
+.gfield_error select,
+.gfield_error textarea {
+  border-color: var(--wp--preset--color--error);
+}
+
+@media (min-width: 768px) {
+  .ginput_complex {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .search-form {
+    display: grid;
+  }
+
+  .search-submit {
+    width: 100%;
+  }
+}
+
+.gsection_title {
+  font-size: var(--wp--preset--font-size--heading-2);
+  line-height: 1.2;
+margin: 0;
+}
+
+.gform_fields {
+  display: grid;
+  gap: var(--wp--preset--spacing--40);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* .gform_fields .gfield {
+  margin-bottom: var(--wp--preset--spacing--40);
+} */
+
+input.custom,
+.gform_fields .gfield input {
+  display: block;
+  width: 100%;
+  padding: 10px 34px 12px 0;
+  line-height: 1;
+  border: none;
+  background-image:
+    linear-gradient(to top, #D9AE3B 0, #D9AE3B 2px, transparent 2px, transparent 100%),
+    url("data:image/svg+xml;charset=utf-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3e%3cpath stroke='%23ce9e34' stroke-width='2' vector-effect='non-scaling-stroke' d='M0 36L34 2'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 0 100%, 100% 100%;
+  background-size: calc(100% - 36px) 100%, 36px 36px;
+}
+@media (min-width: 768px) {
+  .gform_fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gform_fields .gfield {
+    grid-column: 1 / -1;
+  }
+
+  .gform_fields .gfield.col-lg-6 {
+    grid-column: span 1;
+  }
+
+  .gform_fields .gfield.gfield--type-section {
+    grid-column: 1 / -1;
+  }
+}
+
+
+
+.gform_fields .gfield_radio, .gform_fields .gfield_checkbox {
+    padding: 0;
+    list-style: none;
+}
+
+.gform_fields .gfield input[type="checkbox"], .gform_fields .gfield input[type="radio"] {
+    display: inline;
+    width: auto;
+}
+input.custom, .gform_fields .gfield input, textarea.custom, .gform_fields .gfield textarea {
+    font-size: 18px;
+}
+
+.gform_fields .gfield_radio label, .gform_fields .gfield_checkbox label {
+    margin: 0 0 0 .35em;
+    vertical-align: middle;
+}
+
+.ui-datepicker {
+  position: absolute !important;
+  z-index: 99999 !important;
+  margin-top: 8px;
+  padding: 16px;
+  border: 1px solid var(--wp--preset--color--accent);
+  background: var(--wp--preset--color--base);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.16);
+}
+
+.ui-datepicker .ui-datepicker-header {
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px; */
+  margin-bottom: 12px;
+}
+.ui-datepicker-header .ui-datepicker-next {
+  margin-inline-start: 12px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--wp--preset--font-size--label);
+  text-transform: uppercase;
+}
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+  cursor: pointer;
+}
+
+.ui-datepicker table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ui-datepicker th,
+.ui-datepicker td {
+  padding: 4px;
+  text-align: center;
+}
+
+.ui-datepicker td a,
+.ui-datepicker td span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: var(--wp--preset--color--contrast);
+  text-decoration: none;
+}
+
+.ui-datepicker td a:hover,
+.ui-datepicker td a:focus-visible,
+.ui-datepicker .ui-state-active {
+  background: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--contrast);
+}
+
+
+
+/* .gform_fields .gfield .ginput_container {
+    margin-bottom: 24px;
+} */
+
+.gform_drop_area {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    background: transparent;
+}
+
+.gfield_description.gform_fileupload_rules {
+      display: block;
+  margin-top: 1rem;
+}
+.gform_drop_area .gform_drop_instructions {
+    display: block;
+    /* margin-bottom: 0.5em; */
+}
+
+.gform_footer {
+    margin-top: 24px;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+    padding: 0;
+}

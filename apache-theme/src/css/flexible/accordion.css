@@ -1,0 +1,230 @@
+.apache-flex--accordion {
+  padding-block: 0 var(--wp--preset--spacing--50);
+}
+
+.apache-flex--accordion__inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.apache-flex--accordion__title {
+  margin-block: 0 var(--wp--preset--spacing--30);
+  font-weight: 600;
+}
+
+
+
+.apache-flex--accordion .accordion-panel {
+  overflow: hidden;
+}
+
+@media (max-width: 767.98px) {
+  .apache-flex--accordion {
+    padding-block: var(--wp--preset--spacing--40);
+  }
+}
+
+
+
+.accordion-block .accordion-wrapper ul li {
+  margin: 0 0 8px;
+}
+
+.accordion-block .accordion-toggle-all {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+  min-height: 22px;
+}
+
+.accordion-block .accordion-toggle-link::after {
+  content: "";
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #d9ae3b transparent transparent transparent;
+    margin-left: 0.75rem;
+    transition: transform 0.2s ease;
+}
+ 
+.accordion-block .accordion-toggle-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--wp--preset--color--link);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.accordion-block .accordion-toggle-link:hover,
+.accordion-block .accordion-toggle-link:focus,
+.accordion-block .accordion-toggle-link:focus-visible {
+  outline: none;
+  text-decoration: none;
+}
+
+
+
+.accordion-block .accordion {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-block:not(.gray-bars) .accordion-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #efefef;
+}
+
+.accordion-block .accordion-header {
+  margin: 0;
+}
+
+.accordion-block:not(.gray-bars) .accordion-trigger {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  appearance: none;
+  background-color: transparent;
+  color: var(--wp--preset--color--contrast);
+  cursor: pointer;
+  font-size: 1.438rem;
+  font-weight: 600;
+  padding: 0 2.2rem 0 0;
+  text-align: left;
+    text-transform: none;
+}
+.accordion-block:not(.gray-bars) .accordion-trigger:hover {
+   background-color: transparent;
+}
+.accordion-block:not(.gray-bars) .accordion-trigger:focus,
+.accordion-block .accordion-trigger:focus-visible {
+  outline: none;
+   background-color: transparent;
+}
+
+
+.accordion-block:not(.gray-bars) .accordion-trigger::after {
+  position: absolute;
+  right: 11px;
+  top: 5px;
+  background-image: url('data:image/svg+xml,%3Csvg%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2020%2020%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20fill%3D%22%23D9AE3B%22%20d%3D%22M2.582%2013.891c-.272.268-.709.268-.979%200s-.271-.701%200-.969l7.908-7.83a.697.697%200%200%201%20.979%200l7.908%207.83a.68.68%200%200%201%200%20.969.695.695%200%200%201-.978%200L10%206.75l-7.418%207.141z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  content: '';
+  transition: transform var(--apa-transition);
+  transform: rotate(180deg);
+
+}
+
+.accordion-block .accordion-trigger[aria-expanded="true"] {
+  background-color: var(--wp--preset--color--base);
+  color: var(--wp--preset--color--contrast);
+}
+
+.accordion-block .accordion-trigger[aria-expanded="true"]::after {
+  transform: rotate(360deg);
+}
+
+.accordion-block .accordion-panel {
+  background-color: var(--wp--preset--color--base);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  height: 0;
+  overflow: hidden;
+  transition: height 220ms ease;
+
+}
+
+.accordion-block .accordion-content {
+  padding: 1.25rem 0;
+}
+
+.accordion-block .accordion-content a {
+  overflow-wrap: anywhere;
+
+}
+
+/* GRAY BARS VARIATION */
+
+
+
+.accordion-block.gray-bars .accordion-toggle-link[data-state="open"]::after {
+  transform: rotate(180deg) translateY(-1px);
+} 
+
+.accordion-block.gray-bars .accordion-item {
+
+  padding: 0;
+  margin: 0 0 10px 0;
+  border-bottom: 0px;
+}
+.accordion-block.gray-bars .accordion-item:last-child {
+  border-bottom: 0px;
+}
+
+
+.accordion-block.gray-bars .accordion-trigger {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  appearance: none;
+  background-color: transparent;
+  background-image:
+    linear-gradient(135deg, transparent 9px, #efefef 9px, #efefef),
+    linear-gradient(315deg, transparent 9px, #efefef 9px, #efefef); 
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 51% 100%;
+  color: var(--wp--preset--color--contrast);
+  cursor: pointer;
+  font-size: 1.438rem;
+  font-weight: 600;
+  padding:  0.9rem 1.25rem;
+  text-align: left;
+    text-transform: none;
+  transition: background-color var(--apa-transition), color var(--apa-transition); 
+}
+.accordion-block.gray-bars .accordion-trigger:hover {
+   background-color: transparent;
+  background-image:
+    linear-gradient(135deg, transparent 9px, #efefef 9px, #efefef),
+    linear-gradient(315deg, transparent 9px, #efefef 9px, #efefef);
+    background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 51% 100%;
+  color: var(--wp--preset--color--contrast);
+}
+.accordion-block.gray-bars .accordion-trigger:focus,
+.accordion-block .accordion-trigger:focus-visible {
+  outline: none;
+    background-color: transparent;
+  background-image:
+    linear-gradient(135deg, transparent 9px, #efefef 9px, #efefef),
+    linear-gradient(315deg, transparent 9px, #efefef 9px, #efefef);
+    background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: 51% 100%; 
+}
+
+.accordion-block.gray-bars .accordion-trigger::after {
+    content: "";
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #555 transparent transparent transparent;
+    margin-left: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.accordion-block.gray-bars .accordion-panel {
+
+    padding: 0 1.25rem 1.25rem;
+
+}

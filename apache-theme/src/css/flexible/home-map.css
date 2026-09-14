@@ -1,0 +1,225 @@
+.apache-flex--home-map {
+  margin-block-start: var(--apache-flex-margin-top, 0);
+  /* padding-block: 29px var(--wp--preset--spacing--50); */
+  overflow: hidden;
+  position: relative;
+}
+
+.home-map {
+  position: relative;
+
+}
+
+.home_map .home-map__media {
+    color: var(--wp--preset--color--highlight);
+}
+.home-map__header {
+  margin-block-start: var(--wp--preset--spacing--50);
+}
+
+.home-map__inner {
+  position: relative;
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-wide-width));
+  margin-inline: auto;
+  padding-bottom: 40px;
+}
+
+.home-map__header {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+div.home-map__inner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #d8d8d8;
+  pointer-events: none;
+  margin: 0 auto;
+  right: 0;
+}
+
+
+.home-map__content {
+  position: absolute;
+  z-index: 2;
+  bottom: 12%;
+  left: 16%;
+  max-width: min(420px, 36vw);
+}
+
+
+.home-map__media {
+  position: relative;
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+}
+
+.home-map svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: var(--wp--preset--color--highlight);
+}
+
+.home-map__media path {
+  vector-effect: non-scaling-stroke;
+}
+
+.home-map__media [data-region] {
+  transition:
+    fill 300ms ease,
+    stroke 300ms ease,
+    opacity 300ms ease,
+    stroke-dashoffset 700ms ease;
+}
+
+.home-map__media [data-region].is-active {
+  fill: rgba(255, 255, 255, 0.18);
+  stroke: currentColor;
+  stroke-width: 2;
+  opacity: 1;
+}
+
+.home-map__marker {
+  cursor: pointer;
+  outline: none;
+  color: var(--wp--preset--color--highlight);
+}
+
+.home-map__marker-dot {
+  fill: var(--wp--preset--color--highlight);
+}
+
+.home-map__marker-pulse {
+  fill: transparent;
+  stroke: var(--wp--preset--color--highlight);
+  stroke-width: 2;
+  opacity: 0.45;
+  transform-box: fill-box;
+  transform-origin: center center;
+}
+
+.home-map__marker.is-active .home-map__marker-pulse,
+.home-map__marker:hover .home-map__marker-pulse,
+.home-map__marker:focus .home-map__marker-pulse {
+  animation: home-map-pulse 900ms ease infinite;
+}
+
+@keyframes home-map-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.55;
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.home-map__tooltip {
+  position: absolute;
+  z-index: 3;
+  max-width: 240px;
+  color: var(--wp--preset--color--contrast, #3D3731);
+  background: transparent;
+  border-left: 1px solid var(--wp--preset--color--contrast, #3D3731);
+  transform: translate(0, calc(-100% - 10px));
+  pointer-events: none;
+  padding-bottom: 20px;
+}
+
+.home-map__tooltip-inner {
+  padding: 14px 16px;
+   background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+} 
+
+
+
+.home-map__tooltip[hidden] {
+  display: none;
+}
+
+
+
+.home-map__marker-title {
+   font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  font-weight: 400;
+  fill: currentColor;
+  pointer-events: none;
+}
+.home-map__marker:hover .home-map__marker-title,
+.home-map__marker:focus .home-map__marker-title {
+ font-weight: 400;
+}
+
+.home-map .apache-flex--apache-section-header__headline {
+    text-align: center;
+    max-width: 24em;
+    margin: 0 auto var(--wp--preset--spacing--40);
+    font-size: var(--wp--preset--font-size--heading-3);
+    line-height: 1.08;
+}
+
+
+
+.home-map__content .h2 {
+  margin: 0 0 15px;
+}
+
+@media (max-width: 767.98px) {
+  .home-map__content {
+    bottom: 6%;
+    left: 8%;
+    max-width: 70%;
+  }
+  .home-map__content .h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+}
+
+
+.home-map__marker {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.home-map__marker:hover,
+.home-map__marker:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.home-map__tooltip-caption {
+  margin: 0;
+  color: inherit;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+@media (min-width: 992px) {
+  .apache-flex--home-map {
+    padding-block-end: 53px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .home-map__inner {
+    width: calc(100% - var(--apa-container-gutter));
+    margin-inline: 0 auto;
+  }
+
+  .home-map__tooltip {
+    max-width: 200px;
+    padding: 12px 14px;
+    transform: translate(0, calc(-100% - 10px));
+  }
+}

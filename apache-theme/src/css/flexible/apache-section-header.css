@@ -1,0 +1,76 @@
+.apache-flex--apache-section-header {
+  padding-block: var(--wp--preset--spacing--50);
+}
+
+.apache-flex--apache-section-header .apache-flex--apache-section-header__content{
+  margin-block-start: var(--wp--preset--spacing--30);
+}
+
+/* .apache-flex--apache-section-header.first-module{
+  padding-block-end: 0;
+} */
+
+.apache-flex--apache-section-header__inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.centermulti .apache-flex--apache-section-header__wrapper,
+.rightmulti .apache-flex--apache-section-header__wrapper,
+.link .apache-flex--apache-section-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--wp--preset--spacing--10);
+  justify-content: space-between;
+  align-items:flex-start;
+}
+
+.centermulti .apache-flex--apache-section-header__wrapper {
+   display: flex;
+  flex-direction: column;
+
+}
+.centermulti .apache-flex--apache-section-header__headline {
+  text-align: center;
+  max-width: 24em;
+  margin: 0 auto var(--wp--preset--spacing--40);
+  font-size: var(--wp--preset--font-size--heading-3);
+    line-height: 1.08;
+}
+.apache-flex--apache-section-header__ctas--centermulti {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--wp--preset--spacing--30);
+    width: 100%;
+
+}
+
+.apache-flex--apache-section-header .section-name {
+  margin-block-end: var(--wp--preset--spacing--30);
+}
+
+.apache-flex--apache-section-header__headline {
+margin-block: 0;
+  /* margin-block: 0 var(--wp--preset--spacing--40); */
+}
+
+/* .apache-flex--apache-section-header:not(.none) .apache-flex--apache-section-header__headline {
+    max-width: 12em;
+} */
+
+.section-name.yellow {
+  color: var(--wp--preset--color--accent);
+}
+
+@media (max-width: 767.98px) {
+  .apache-flex--apache-section-header {
+    padding-block: var(--wp--preset--spacing--40) var(--wp--preset--spacing--20);
+  }
+}
+
+.apache-flex--apache-section-header__ctas--rightmulti {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--10);
+}

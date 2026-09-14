@@ -1,0 +1,95 @@
+.apache-contact-info {
+  margin-block: var(--wp--preset--spacing--70, 4rem) 0;
+}
+
+.apache-contact-info__block,
+.apache-contact-departments {
+  margin-block-start: var(--apache-contact-margin-top, 0);
+}
+
+.apache-contact-info__inner {
+  width: min(
+    calc(100% - (var(--wp--preset--spacing--50, 2rem) * 2)),
+    var(--wp--style--global--content-size, 1170px)
+  );
+  margin-inline: auto;
+}
+
+.apache-contact-info__block + .apache-contact-info__block,
+.apache-contact-departments {
+  margin-block-start: max(var(--apache-contact-margin-top, 0), var(--wp--preset--spacing--60, 3rem));
+}
+
+.apache-contact-info__headline,
+.apache-contact-departments__headline {
+  margin-block-end: var(--wp--preset--spacing--30, 1.5rem);
+}
+
+.apache-contact-info__content {
+  max-width: 70rem;
+}
+
+.apache-contact-info__divider {
+  width: 100%;
+  height: 1px;
+  margin-block-start: var(--wp--preset--spacing--50, 2rem);
+  background: color-mix(in srgb, var(--wp--preset--color--contrast) 18%, transparent);
+}
+
+.apache-contact-departments {
+  padding-block-end: var(--wp--preset--spacing--60, 3rem);
+}
+
+.departments-module .headline,
+.apache-contact-departments__headline {
+  margin-block-end: var(--wp--preset--spacing--30, 1.5rem);
+}
+
+.apache-contact-departments__subheadline {
+  max-width: 46rem;
+  margin-block-end: var(--wp--preset--spacing--40, 2rem);
+}
+
+.apache-contact-departments__control {
+  max-width: 24rem;
+  margin-block-end: var(--wp--preset--spacing--50, 2rem);
+}
+
+.apache-contact-departments__select {
+  width: 100%;
+}
+
+.apache-contact-departments__panels {
+  max-width: 72rem;
+}
+
+.apache-contact-departments__panel {
+  padding-block: var(--wp--preset--spacing--30, 1.5rem);
+  border-top: 1px solid color-mix(in srgb, var(--wp--preset--color--contrast) 14%, transparent);
+}
+
+.apache-contact-departments__panel[hidden] {
+  display: none;
+}
+
+.apache-contact-departments__panel-title {
+  margin-block-end: var(--wp--preset--spacing--30, 1.5rem);
+}
+
+.banner-topography,
+.apache-contact-info__topography {
+  min-height: 80px;
+  background-color: var(--wp--preset--color--neutral);
+  background-image: url("../../assets/images/topography-bg.svg");
+  background-position: 50% 80%;
+  background-repeat: repeat;
+  background-size: 550px auto;
+}
+
+@media (min-width: 992px) {
+  .banner-topography,
+  .apache-contact-info__topography {
+    min-height: 130px;
+    background-size: 800px auto;
+  }
+}

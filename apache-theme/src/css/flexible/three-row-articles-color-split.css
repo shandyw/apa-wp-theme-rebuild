@@ -1,0 +1,166 @@
+.apache-flex--three-row-articles-color-split {
+  --apache-split-bg: var(--wp--preset--color--accent);
+  --apache-split-text: var(--wp--preset--color--contrast);
+  margin-block-start: var(--apache-flex-margin-top, 90px);
+}
+
+.apache-flex--three-row-articles-color-split.apache-flex--color-green {
+  --apache-split-bg: var(--wp--preset--color--light-green);
+  --apache-split-text: var(--wp--preset--color--green);
+}
+
+.apache-flex--three-row-articles-color-split.apache-flex--color-yellow {
+  --apache-split-bg: var(--wp--preset--color--yellow);
+}
+
+.apache-flex--three-row-articles-color-split.apache-flex--color-gray {
+  --apache-split-bg: var(--wp--preset--color--muted);
+}
+
+.apache-flex--three-row-articles-color-split__header {
+  position: relative;
+  z-index: 1;
+  padding-block: var(--wp--preset--spacing--50) var(--wp--preset--spacing--90);
+}
+
+.apache-flex--three-row-articles-color-split__header-inner,
+.apache-flex--three-row-articles-color-split__articles-inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-content-width));
+  margin-inline: auto;
+}
+
+.apache-flex--three-row-articles-color-split .section-name {
+  margin-block-end: var(--wp--preset--spacing--30);
+}
+
+.apache-flex--three-row-articles-color-split__headline {
+  max-width: 10em;
+  margin: 0;
+}
+
+.apache-flex--three-row-articles-color-split__articles {
+  position: relative;
+  margin-block-start: -117px;
+  padding-block: 86px 110px;
+  background: var(--apache-split-bg);
+  color: var(--apache-split-text);
+}
+
+.apache-flex--three-row-articles-color-split.apache-flex--text-top .apache-flex--three-row-articles-color-split__articles {
+  margin-block-start: -45px;
+  padding-block-start: 75px;
+}
+
+.apache-flex--three-row-articles-color-split__articles-inner {
+  position: relative;
+}
+
+.apache-flex--three-row-articles-color-split__square {
+  display: none;
+}
+
+.apache-flex--three-row-articles-color-split__grid {
+  display: grid;
+  gap: var(--wp--preset--spacing--50);
+}
+
+.apache-flex--three-row-articles-color-split__article {
+  min-width: 0;
+}
+
+.apache-flex--three-row-articles-color-split__article-title {
+  position: relative;
+  margin-block: 0 var(--wp--preset--spacing--30);
+  color: inherit;
+  font-size: var(--wp--preset--font-size--heading-3);
+}
+
+.apache-flex--three-row-articles-color-split__article-title span {
+  position: relative;
+  display: block;
+  padding-block-start: var(--wp--preset--spacing--30);
+}
+
+.apache-flex--three-row-articles-color-split__article-title span::before,
+.apache-flex--three-row-articles-color-split__article-title span::after {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: var(--wp--preset--color--base);
+  content: "";
+}
+
+.apache-flex--three-row-articles-color-split__article-title span::before {
+  left: 0;
+  width: 100%;
+}
+
+.apache-flex--three-row-articles-color-split__article-title span::after {
+  right: 100%;
+  width: 75px;
+  transform: rotate(-45deg);
+  transform-origin: 100% 0;
+}
+
+.apache-flex--three-row-articles-color-split__article-content > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .apache-flex--three-row-articles-color-split__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .apache-flex--three-row-articles-color-split.apache-flex--has-four-articles .apache-flex--three-row-articles-color-split__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .apache-flex--three-row-articles-color-split__square {
+    position: absolute;
+    right: 0;
+    bottom: -64px;
+    display: block;
+    width: 102px;
+    height: 102px;
+    overflow: hidden;
+    opacity: 0.75;
+  }
+
+  .apache-flex--three-row-articles-color-split__square::before {
+    position: absolute;
+    inset: -60px;
+    background: repeating-linear-gradient(
+      135deg,
+      transparent 0 24px,
+      color-mix(in srgb, var(--wp--preset--color--contrast) 80%, transparent) 24px 26px,
+      transparent 26px 50px
+    );
+    content: "";
+  }
+}
+
+@media (max-width: 767.98px) {
+  .apache-flex--three-row-articles-color-split {
+    margin-block-start: var(--apache-flex-margin-top, var(--wp--preset--spacing--50));
+  }
+
+  .apache-flex--three-row-articles-color-split__header {
+    padding-block: var(--wp--preset--spacing--40) var(--wp--preset--spacing--80);
+  }
+
+  .apache-flex--three-row-articles-color-split__articles {
+    margin-block-start: -96px;
+    padding-block: var(--wp--preset--spacing--50);
+  }
+
+  .apache-flex--three-row-articles-color-split__grid {
+    gap: var(--wp--preset--spacing--40);
+  }
+
+  .apache-flex--three-row-articles-color-split__article-title {
+    margin-block-end: var(--wp--preset--spacing--20);
+  }
+}

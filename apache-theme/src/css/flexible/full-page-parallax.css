@@ -1,0 +1,89 @@
+.apache-flex--full-page-parallax {
+  --apache-full-page-parallax-overlay: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0.16),
+    rgb(0 0 0 / 0.28) 48%,
+    rgb(0 0 0 / 0.4)
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding-block: clamp(90px, 12vw, 140px);
+  color: var(--wp--preset--color--base);
+  background-color: var(--wp--preset--color--contrast);
+  background-image: var(--apache-full-page-parallax-overlay), var(--apache-full-page-parallax-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.apache-flex--full-page-parallax__inner {
+  width: min(calc(100% - (var(--apa-container-gutter) * 2)), var(--apa-wide-width));
+  margin-inline: auto;
+}
+
+.apache-flex--full-page-parallax__content {
+  max-width: 52rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.apache-flex--full-page-parallax__eyebrow {
+  margin: 0 0 var(--wp--preset--spacing--30);
+  color: inherit;
+  font-family: var(--wp--preset--font-family--post-grotesk-book);
+  font-size: clamp(1.75rem, 1.2rem + 1vw, 2.25rem);
+  /* font-weight: var(--wp--preset--font-weight--bold); */
+  line-height: 1.1;
+}
+
+.apache-flex--full-page-parallax__headline {
+  margin: 0;
+  color: inherit;
+  font-size: clamp(3.75rem, 6vw, 5.875rem);
+  font-weight: var(--wp--preset--font-weight--normal);
+  line-height: 0.95;
+  font-family: var(--wp--preset--font-family--freight-text-pro);
+}
+
+.apache-flex--full-page-parallax__copy {
+  max-width: 44rem;
+  margin: var(--wp--preset--spacing--40) auto 0;
+  color: inherit;
+}
+
+.apache-flex--full-page-parallax__copy > :first-child {
+  margin-top: 0;
+}
+
+.apache-flex--full-page-parallax__copy > :last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .apache-flex--full-page-parallax {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .apache-flex--full-page-parallax {
+    min-height: 80svh;
+    padding-block: var(--wp--preset--spacing--70);
+    background-attachment: scroll;
+  }
+
+  .apache-flex--full-page-parallax__eyebrow {
+    margin-bottom: var(--wp--preset--spacing--20);
+  }
+
+  .apache-flex--full-page-parallax__headline {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+    line-height: 1;
+  }
+
+  .apache-flex--full-page-parallax__copy {
+    margin-top: var(--wp--preset--spacing--30);
+  }
+}
